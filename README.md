@@ -1,20 +1,53 @@
 # Learning About Qt For Python
 
-My employer heavily uses Qt from its native C++. The Qt Company's adoption of the PySide project provides LGPL Python APIs.
+My employer heavily uses Qt from its native C++, but has not attempted Qt from Python.
 
-These are my personal investigations of Qt For Python, learning by hand-crafting small, tested desktop applications.
+The Qt Company's official adoption of the [PySide project][QP01] provides an attractive licensing alternative to the long-standing [PyQt product][QP02].
+
+These are my personal investigations of [Qt for Python][QP03], learning by hand-crafting small, tested desktop applications.
+
+[QP01]: https://en.wikipedia.org/wiki/PySide
+        "Wikipedia entry for PySide"
+[QP02]: https://en.wikipedia.org/wiki/PyQt
+        "Wikipedia entry for PyQt"
+[QP03]: https://doc.qt.io/qtforpython/
+        "Qt for Python"
 
 
 ## Exercises
 
-In progress...more to come.
+Work in progress...
 
 
 ## Configuration
 
-Installation instructions are at https://wiki.qt.io/Qt_for_Python
+These exercises use Qt 6.3.0, the latest at the time of writing.
 
-It went smoothly, except for some helpful advice to upgrade pip in the Python virtual environment.
+The corresponding PySide6 [installation instructions][CO01] worked well, mostly.
+
+[CO01]: https://wiki.qt.io/Qt_for_Python
+        "Qt for Python: PySide6"
+
+```
+~ % mkdir QtForPython
+
+~ % cd QtForPython
+
+QtForPython % python3 -m venv env
+
+QtForPython % source env/bin/activate
+
+(env) QtForPython % pip3 install PySide6
+
+(env) QtForPython % python3
+
+>>> import PySide6
+
+>>> PySide6.__version__
+'6.3.0'
+```
+
+I had one error, with helpful advice to upgrade pip in the Python virtual environment. Here is the full session.
 
 ```
 ~ % mkdir QtForPython
