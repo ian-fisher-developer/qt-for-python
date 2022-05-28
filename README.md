@@ -1,6 +1,6 @@
 # Learning About Qt For Python
 
-My employer heavily uses Qt from its native C++, but has not attempted Qt from Python.
+I have much professional experience with Qt from its native C++, but have never attempted Qt from Python.
 
 The Qt Company's official adoption of the [PySide project][QP01] provides an attractive licensing alternative to the long-standing [PyQt product][QP02].
 
