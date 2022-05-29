@@ -20,7 +20,7 @@ This is a brief summary of the exercises. Click the links above for more informa
 
 1. Hello World
 
-   A trivial application, useful for figuring out the configuration details.
+   A trivial application, useful for discovering the configuration details.
 
 
 ## Configuration

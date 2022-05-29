@@ -1,3 +1,6 @@
 {
-    "files": ["src/hello_world.py"]
+    "files": [
+        "hello_world.py",
+        "test_hello_world.py"
+    ]
 }
