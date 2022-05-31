@@ -1,11 +1,11 @@
 import sys
 from PySide6.QtWidgets import QApplication, QTableView
-from minimal_table_model import MinimalTableModel
+from fixed_table_model import FixedTableModel
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    model = MinimalTableModel()
+    model = FixedTableModel()
     table = QTableView()
     table.setModel(model)
     table.show()

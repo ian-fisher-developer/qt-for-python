@@ -1,12 +1,12 @@
 import unittest
-from minimal_table_model import MinimalTableModel
+from fixed_table_model import FixedTableModel
 from PySide6.QtCore import Qt
 
 
 class TestFixedTableModel(unittest.TestCase):
 
     def setUp(self):
-        self.model = MinimalTableModel()
+        self.model = FixedTableModel()
 
     def test_has_three_rows(self):
         self.assertEqual(self.model.rowCount(), 3)
@@ -31,6 +31,16 @@ class TestFixedTableModel(unittest.TestCase):
         section = self.model.rowCount()-1
         actual = self.model.headerData(section, Qt.Vertical, Qt.DisplayRole)
         self.assertEqual(actual, "3")
+
+    def test_displays_data_as_column_letter_row_number(self):
+        test_cells = [{"row": 0, "col": 0, "display": "A1"},
+                      {"row": 2, "col": 0, "display": "A3"},
+                      {"row": 0, "col": 4, "display": "E1"},
+                      {"row": 2, "col": 4, "display": "E3"}]
+        for cell in test_cells:
+            index = self.model.index(cell["row"], cell["col"])
+            actual = self.model.data(index, Qt.DisplayRole)
+            self.assertEqual(actual, cell["display"])
 
 
 if __name__ == '__main__':

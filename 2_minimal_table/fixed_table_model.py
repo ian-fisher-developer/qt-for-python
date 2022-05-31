@@ -2,7 +2,7 @@ from string import ascii_uppercase
 from PySide6.QtCore import (QAbstractTableModel, QModelIndex, Qt)
 
 
-class MinimalTableModel(QAbstractTableModel):
+class FixedTableModel(QAbstractTableModel):
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -17,14 +17,15 @@ class MinimalTableModel(QAbstractTableModel):
             return 0
         return 5
 
-    #def data(self, index, role=Qt.DisplayRole):
-    #    if not index.isValid():
-    #        return None
+    def data(self, index, role=Qt.DisplayRole):
+        if not index.isValid():
+            return None
+        if role != Qt.DisplayRole:
+            return None
 
-    #    if role == Qt.DisplayRole:
-    #        return "1A"
-
-    #    return None
+        col_label = self.headerData(index.column(), Qt.Horizontal)
+        row_label = self.headerData(index.row(), Qt.Vertical)
+        return col_label + row_label
 
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         if role != Qt.DisplayRole:
