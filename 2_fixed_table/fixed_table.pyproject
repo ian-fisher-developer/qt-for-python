@@ -1,6 +1,6 @@
 {
     "files": [
-        "minimal_table.py",
+        "fixed_table.py",
         "fixed_table_model.py",
         "test_fixed_table_model.py"
     ]

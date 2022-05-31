@@ -8,5 +8,6 @@ if __name__ == "__main__":
     model = FixedTableModel()
     table = QTableView()
     table.setModel(model)
+    table.resizeColumnsToContents()
     table.show()
     sys.exit(app.exec())

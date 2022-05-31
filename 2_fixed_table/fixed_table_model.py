@@ -1,8 +1,18 @@
+"""A simple Qt-for-Python table model with fixed data."""
+
 from string import ascii_uppercase
 from PySide6.QtCore import (QAbstractTableModel, QModelIndex, Qt)
 
 
 class FixedTableModel(QAbstractTableModel):
+    """A fixed 3 rows by 5 columns table model.
+
+    The model displays row headers as numbers, column headers as letters, and
+    the data as A1, B1, etc."""
+
+    # Exercise Notes:
+    # - This Python implementation should look very familiar to C++ developers
+    # - Note the lack of QString or QVariant, Qt-for-Python uses native types
 
     def __init__(self, parent=None):
         super().__init__(parent)
