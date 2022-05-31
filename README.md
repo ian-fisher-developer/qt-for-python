@@ -22,6 +22,10 @@ This is a brief summary of the exercises. Click the links above for more informa
 
    A trivial application, useful for discovering the configuration details.
 
+2. Fixed Table
+
+   A table view widget displays data from a small, fixed, table model.
+
 
 ## Configuration
 
