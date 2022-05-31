@@ -1,0 +1,7 @@
+{
+    "files": [
+        "minimal_table.py",
+        "minimal_table_model.py",
+        "test_minimal_table_model.py"
+    ]
+}
