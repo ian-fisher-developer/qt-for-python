@@ -20,7 +20,7 @@ This is a brief summary of the exercises. Click the links above for more informa
 
 1. Hello World
 
-   A trivial application, useful for discovering the configuration details.
+   The typical first exercise, deliberately over-engineered to include a unit test -- useful for discovering configuration details.
 
 2. Fixed Table
 
